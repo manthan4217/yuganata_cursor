@@ -1,8 +1,11 @@
 import { motion } from "framer-motion"
-import { Mail, MapPin, Send } from "lucide-react"
+import { Mail, MapPin, Send, MessageCircle } from "lucide-react"
 import { SectionHeader } from "@/components/ui/section-header"
 import { Button } from "@/components/ui/button"
 import { fadeInUp, staggerContainer } from "@/components/ui/section-header"
+
+// Update with your WhatsApp number (country code, no + or spaces)
+const WHATSAPP_NUMBER = "919876543210"
 
 export function ContactSection() {
   return (
@@ -11,7 +14,7 @@ export function ContactSection() {
         <SectionHeader
           badge="Contact"
           title="Let's build the next era together"
-          description="Whether you're a restaurant owner, an investor, or an engineer — we'd love to hear from you."
+          description="Need AthithyaOS for your restaurant, custom ERP for your business, or a world-class app? We're ready to help."
         />
 
         <motion.div
@@ -32,6 +35,20 @@ export function ContactSection() {
                 className="mt-1 text-sm text-muted transition-colors hover:text-saffron light:text-zinc-600"
               >
                 hello@yuganata.com
+              </a>
+            </div>
+            <div className="glass rounded-2xl p-6">
+              <MessageCircle className="mb-3 h-5 w-5 text-emerald" />
+              <h3 className="font-display text-sm font-semibold text-white light:text-zinc-900">
+                WhatsApp
+              </h3>
+              <a
+                href={`https://wa.me/${WHATSAPP_NUMBER}?text=Hi%20Yuganata%2C%20I%27d%20like%20to%20learn%20more%20about%20AthithyaOS.`}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="mt-1 text-sm text-muted transition-colors hover:text-emerald light:text-zinc-600"
+              >
+                Chat with our team
               </a>
             </div>
             <div className="glass rounded-2xl p-6">

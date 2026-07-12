@@ -1,4 +1,5 @@
 import { Separator } from "@/components/ui/separator"
+import { Logo } from "@/components/ui/logo"
 
 function LinkedInIcon({ className }: { className?: string }) {
   return (
@@ -25,15 +26,22 @@ const footerLinks = {
     { label: "Contact", href: "#contact" },
   ],
   Products: [
-    { label: "AthithyaOS", href: "#products" },
-    { label: "Roadmap", href: "#roadmap" },
+    { label: "AthithyaOS", href: "#athithya" },
+    { label: "EduSmart OS", href: "#products" },
+    { label: "RetailMax", href: "#products" },
+    { label: "Early Access", href: "#early-access" },
+  ],
+  Services: [
+    { label: "What We Build", href: "#services" },
+    { label: "Industries", href: "#industries" },
     { label: "Technology", href: "#technology" },
+    { label: "Custom Software", href: "#early-access" },
   ],
   Resources: [
-    { label: "How We Build", href: "#how-we-build" },
-    { label: "Future Vision", href: "#future" },
-    { label: "Privacy Policy", href: "#" },
-    { label: "Terms of Service", href: "#" },
+    { label: "Why Yuganata", href: "#compare" },
+    { label: "FAQ", href: "#faq" },
+    { label: "Roadmap", href: "#roadmap" },
+    { label: "Careers", href: "#careers" },
   ],
 }
 
@@ -43,18 +51,11 @@ export function Footer() {
       <div className="container-wide px-6 py-16 md:px-8 lg:px-12">
         <div className="grid gap-12 md:grid-cols-2 lg:grid-cols-5">
           <div className="lg:col-span-2">
-            <a href="#" className="flex items-center gap-2.5">
-              <div className="flex h-9 w-9 items-center justify-center rounded-xl bg-saffron/10 ring-1 ring-saffron/20">
-                <span className="font-display text-lg font-bold text-saffron">Y</span>
-              </div>
-              <div>
-                <span className="font-display text-sm font-semibold text-white light:text-zinc-900">
-                  Yuganata Technologies
-                </span>
-                <p className="text-xs text-muted light:text-zinc-500">
-                  Engineering the Next Era of Intelligent Business.
-                </p>
-              </div>
+            <a href="#" className="block transition-opacity hover:opacity-90">
+              <Logo size="lg" />
+              <p className="mt-3 text-xs text-muted light:text-zinc-500">
+                Engineering the Next Era of Intelligent Business.
+              </p>
             </a>
             <p className="mt-4 max-w-sm text-sm leading-relaxed text-muted light:text-zinc-600">
               Building intelligent Operating Systems for every industry —

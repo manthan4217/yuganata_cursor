@@ -2,14 +2,15 @@ import { useEffect, useState } from "react"
 import { motion, AnimatePresence } from "framer-motion"
 import { Menu, X, Sun, Moon } from "lucide-react"
 import { Button } from "@/components/ui/button"
+import { Logo } from "@/components/ui/logo"
 import { cn } from "@/lib/utils"
 
 const navLinks = [
-  { label: "Vision", href: "#vision" },
   { label: "Products", href: "#products" },
-  { label: "Technology", href: "#technology" },
-  { label: "Roadmap", href: "#roadmap" },
-  { label: "Careers", href: "#careers" },
+  { label: "Services", href: "#services" },
+  { label: "AthithyaOS", href: "#athithya" },
+  { label: "Industries", href: "#industries" },
+  { label: "Founders", href: "#founders" },
   { label: "Contact", href: "#contact" },
 ]
 
@@ -42,18 +43,8 @@ export function Navbar() {
       )}
     >
       <nav className="container-wide flex items-center justify-between px-6 md:px-8 lg:px-12">
-        <a href="#" className="group flex items-center gap-2.5">
-          <div className="flex h-9 w-9 items-center justify-center rounded-xl bg-saffron/10 ring-1 ring-saffron/20 transition-all group-hover:bg-saffron/20">
-            <span className="font-display text-lg font-bold text-saffron">Y</span>
-          </div>
-          <div className="hidden sm:block">
-            <span className="font-display text-sm font-semibold tracking-tight text-white light:text-zinc-900">
-              Yuganata
-            </span>
-            <span className="block text-[10px] tracking-widest text-muted uppercase light:text-zinc-500">
-              Technologies
-            </span>
-          </div>
+        <a href="#" className="group transition-opacity hover:opacity-90">
+          <Logo />
         </a>
 
         <div className="hidden items-center gap-1 lg:flex">
@@ -87,7 +78,7 @@ export function Navbar() {
             className="hidden sm:inline-flex"
             asChild
           >
-            <a href="#products">Explore AthithyaOS</a>
+            <a href="#early-access">Start a Project</a>
           </Button>
           <Button
             variant="ghost"
@@ -121,8 +112,8 @@ export function Navbar() {
                 </a>
               ))}
               <Button variant="default" className="mt-2" asChild>
-                <a href="#products" onClick={() => setMobileOpen(false)}>
-                  Explore AthithyaOS
+                <a href="#early-access" onClick={() => setMobileOpen(false)}>
+                  Start a Project
                 </a>
               </Button>
             </div>
