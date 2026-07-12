@@ -5,7 +5,7 @@ import { Button } from "@/components/ui/button"
 import { fadeInUp, staggerContainer } from "@/components/ui/section-header"
 
 // Update with your WhatsApp number (country code, no + or spaces)
-const WHATSAPP_NUMBER = "919876543210"
+const WHATSAPP_NUMBER = "919920934054"
 
 export function ContactSection() {
   return (
